@@ -891,7 +891,7 @@ Read10X <- function(
   for (j in 1:length(x = full.data[[1]])) {
     list_of_data[[j]] <- do.call(cbind, lapply(X = full.data, FUN = `[[`, j))
     # Fix for Issue #913
-    list_of_data[[j]] <- as(object = list_of_data[[j]], Class = "dgCMatrix")
+    list_of_data[[j]] <- as(object = list_of_data[[j]], Class = "CsparseMatrix")
   }
   names(x = list_of_data) <- names(x = full.data[[1]])
   # If multiple features, will return a list, otherwise
