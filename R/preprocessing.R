@@ -1250,7 +1250,7 @@ ReadMtx <- function(
 
   colnames(x = data) <- cell.names
   rownames(x = data) <- feature.names
-  data <- as(data, Class = "dgCMatrix")
+  data <- as(data, Class = "CsparseMatrix")
   return(data)
 }
 
